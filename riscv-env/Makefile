@@ -22,9 +22,6 @@ $(PROJECT).debug.txt : $(PROJECT).elf
 $(PROJECT).bin : $(PROJECT).elf
 	$(PREFIX)objcopy $^ -O binary $@
 
-test : $(PROJECT).bin
-	../mini-rv32ima/mini-rv32ima -f $<
-
 clean :
 	rm -rf $(TARGETS)
 
